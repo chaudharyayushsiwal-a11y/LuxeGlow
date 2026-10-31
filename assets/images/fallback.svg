@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="spaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7EBE8" />
+      <stop offset="50%" stop-color="#EAD7D1" />
+      <stop offset="100%" stop-color="#C59B6D" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#spaGrad)"/>
+  <circle cx="400" cy="270" r="100" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M400,200 C430,240 460,280 430,330 C400,370 370,330 370,280 Z" fill="#C59B6D"/>
+  <text x="400" y="420" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="bold" fill="#2C2523" text-anchor="middle" letter-spacing="2">LUXEGLOW SANCTUARY</text>
+  <text x="400" y="455" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" fill="#6E645F" text-anchor="middle" letter-spacing="1">Artisanal Salon &amp; Holistic Spa</text>
+</svg>

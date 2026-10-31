@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign In to LuxeGlow - Manage salon appointments, access VIP discounts, and explore master stylist schedules.">
+  <title>Sign In &amp; VIP Sanctuary Club | LuxeGlow Salon &amp; Spa</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page-body">
+
+  <!-- Floating Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Top Navigation Bar for Auth Page -->
+  <header class="auth-header">
+    <div class="container auth-header-container">
+      <a href="index.html" class="brand-logo" aria-label="LuxeGlow Home">
+        <img src="assets/images/logo.svg" alt="LuxeGlow Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-name">LuxeGlow</span>
+          <span class="brand-tagline">Salon &amp; Spa Sanctuary</span>
+        </div>
+      </a>
+      
+      <a href="index.html" class="btn btn-outline btn-sm auth-back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Sanctuary
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Auth Container -->
+  <main class="auth-main-wrapper">
+    <div class="container auth-split-container">
+      
+      <!-- Left Column: Sanctuary VIP Benefits & Ambiance -->
+      <div class="auth-showcase-col reveal-on-scroll">
+        <div class="auth-showcase-card">
+          <div class="auth-badge-vip">
+            <i class="fa-solid fa-crown"></i> LuxeGlow VIP Portal
+          </div>
+          <h1 class="auth-showcase-title">
+            Your Gateway to Bespoke Beauty &amp; Rejuvenation.
+          </h1>
+          <p class="auth-showcase-desc">
+            Sign in to unlock personalized skin protocols, manage your upcoming beauty appointments, track digital receipts, and enjoy members-only rewards.
+          </p>
+
+          <!-- VIP Benefits List -->
+          <ul class="auth-benefits-list">
+            <li>
+              <div class="benefit-icon"><i class="fa-solid fa-sparkles"></i></div>
+              <div class="benefit-text">
+                <strong>10% Welcome Discount</strong>
+                <span>Automatic 10% off your first appointment reservation.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <div class="benefit-text">
+                <strong>Priority Stylist Access</strong>
+                <span>Reserve peak weekend slots with master directors before walk-ins.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i class="fa-solid fa-receipt"></i></div>
+              <div class="benefit-text">
+                <strong>Digital Booking Slips</strong>
+                <span>Instant access to past treatment history, invoices, and re-booking.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i class="fa-solid fa-cake-candles"></i></div>
+              <div class="benefit-text">
+                <strong>Complimentary Birthday Treatment</strong>
+                <span>Receive an aromatic Kumkumadi facial during your birthday month.</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- One-Click Demo Logins for Quick Testing & Viva Evaluation -->
+          <div class="demo-login-box">
+            <span class="demo-box-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Quick Examiner / Viva Test Accounts:</span>
+            <div class="demo-buttons-row">
+              <button type="button" class="btn-demo-quick" id="demoClientBtn" title="Fill client credentials">
+                <i class="fa-solid fa-user"></i> Client Demo
+              </button>
+              <button type="button" class="btn-demo-quick" id="demoStaffBtn" title="Fill master stylist credentials">
+                <i class="fa-solid fa-scissors"></i> Stylist Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Login & Register Card -->
+      <div class="auth-form-col">
+        <div class="auth-card">
+          
+          <!-- Auth Tabs: Sign In vs Sign Up -->
+          <div class="auth-tabs-header">
+            <button class="auth-tab-btn active" id="tabSignInBtn" data-target="loginFormSection">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In
+            </button>
+            <button class="auth-tab-btn" id="tabSignUpBtn" data-target="registerFormSection">
+              <i class="fa-solid fa-user-plus"></i> Create Account
+            </button>
+          </div>
+
+          <!-- TAB 1: SIGN IN FORM -->
+          <div class="auth-tab-content active" id="loginFormSection">
+            <div class="auth-form-header">
+              <h2>Welcome Back</h2>
+              <p>Enter your registered credentials to access your sanctuary account.</p>
+            </div>
+
+            <form id="loginForm" novalidate>
+              <div class="form-group">
+                <label for="loginEmail"><i class="fa-regular fa-envelope"></i> Email or Mobile Number <span class="required">*</span></label>
+                <input type="text" id="loginEmail" class="form-control" placeholder="e.g. radhika.sen@example.com" required>
+                <span class="error-msg" id="loginEmailError">Please enter your email or 10-digit mobile number.</span>
+              </div>
+
+              <div class="form-group">
+                <div class="label-with-link">
+                  <label for="loginPassword"><i class="fa-solid fa-lock"></i> Password <span class="required">*</span></label>
+                  <a href="#" id="forgotPasswordLink" class="auth-link-sm">Forgot Password?</a>
+                </div>
+                <div class="password-input-wrapper">
+                  <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required minlength="6">
+                  <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                    <i class="fa-regular fa-eye"></i>
+                  </button>
+                </div>
+                <span class="error-msg" id="loginPasswordError">Please enter your password (minimum 6 characters).</span>
+              </div>
+
+              <div class="form-options-row">
+                <label class="remember-checkbox-label">
+                  <input type="checkbox" id="rememberMeCheckbox" checked>
+                  <span>Remember my login on this device</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-luxury btn-block auth-submit-btn" id="loginSubmitBtn">
+                <span class="btn-text"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Sanctuary</span>
+                <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i> Authenticating...</span>
+              </button>
+
+              <!-- Social Auth Divider -->
+              <div class="auth-divider">
+                <span>or continue with</span>
+              </div>
+
+              <div class="social-auth-row">
+                <button type="button" class="social-auth-btn" id="googleAuthBtn">
+                  <i class="fa-brands fa-google"></i> Google
+                </button>
+                <button type="button" class="social-auth-btn" id="appleAuthBtn">
+                  <i class="fa-brands fa-apple"></i> Apple ID
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 2: REGISTER FORM -->
+          <div class="auth-tab-content" id="registerFormSection">
+            <div class="auth-form-header">
+              <h2>Join LuxeGlow VIP</h2>
+              <p>Create your membership profile in seconds for seamless bookings.</p>
+            </div>
+
+            <form id="registerForm" novalidate>
+              <div class="form-group">
+                <label for="registerName"><i class="fa-regular fa-user"></i> Full Name <span class="required">*</span></label>
+                <input type="text" id="registerName" class="form-control" placeholder="e.g. Shalini Roy" required minlength="2">
+                <span class="error-msg" id="registerNameError">Please enter your full name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="registerPhone"><i class="fa-solid fa-phone"></i> Mobile <span class="required">*</span></label>
+                  <input type="tel" id="registerPhone" class="form-control" placeholder="10-digit number" required pattern="[0-9]{10}">
+                  <span class="error-msg" id="registerPhoneError">Valid 10 digits required.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="registerEmail"><i class="fa-regular fa-envelope"></i> Email <span class="required">*</span></label>
+                  <input type="email" id="registerEmail" class="form-control" placeholder="name@domain.com" required>
+                  <span class="error-msg" id="registerEmailError">Valid email required.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="registerPassword"><i class="fa-solid fa-lock"></i> Create Password <span class="required">*</span></label>
+                <div class="password-input-wrapper">
+                  <input type="password" id="registerPassword" class="form-control" placeholder="At least 6 characters" required minlength="6">
+                  <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                    <i class="fa-regular fa-eye"></i>
+                  </button>
+                </div>
+                <div class="password-strength-bar">
+                  <div class="strength-indicator" id="strengthIndicator"></div>
+                </div>
+                <span class="strength-text" id="strengthText">Password Strength: None</span>
+                <span class="error-msg" id="registerPasswordError">Password must be at least 6 characters.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="registerServicePref"><i class="fa-solid fa-heart"></i> Preferred Treatments (Optional)</label>
+                <select id="registerServicePref" class="form-control">
+                  <option value="all">Interested in All Treatments</option>
+                  <option value="hair">Hair Architecture &amp; Balayage</option>
+                  <option value="facial">HydraFacials &amp; 24K Gold Therapy</option>
+                  <option value="manicure-pedicure">Russian Gel Nails &amp; Spa Pedicures</option>
+                  <option value="bridal">Royal Bridal Couture Makeover</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="terms-checkbox-label">
+                  <input type="checkbox" id="registerTermsCheckbox" required>
+                  <span>I agree to LuxeGlow <a href="#" onclick="alert('LuxeGlow stores your booking preferences securely in LocalStorage.'); return false;">Terms of Service</a> &amp; <a href="#" onclick="alert('Your privacy is protected. No tracking or third party selling.'); return false;">Privacy Policy</a>.</span>
+                </label>
+                <span class="error-msg" id="registerTermsError">You must agree to the terms to proceed.</span>
+              </div>
+
+              <button type="submit" class="btn btn-luxury btn-block auth-submit-btn" id="registerSubmitBtn">
+                <span class="btn-text"><i class="fa-solid fa-user-check"></i> Create VIP Sanctuary Account</span>
+                <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i> Creating Account...</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Simple Auth Footer -->
+  <footer class="auth-footer">
+    <div class="container text-center">
+      <p>&copy; 2026 LuxeGlow Salon &amp; Spa. All Rights Reserved. Built as a Senior Frontend Capstone.</p>
+    </div>
+  </footer>
+
+  <!-- Dedicated Login Logic Script -->
+  <script>
+    // LocalStorage Keys for Authentication
+    const AUTH_KEYS = {
+      CURRENT_USER: "luxeglow_current_user",
+      USERS_LIST: "luxeglow_registered_users"
+    };
+
+    // Pre-seeded Demo Users for Exam / Viva Review
+    const DEMO_USERS = [
+      {
+        id: "usr-01",
+        name: "Dr. Radhika Sen",
+        email: "radhika.sen@example.com",
+        phone: "9876543210",
+        password: "password123",
+        role: "vip-client",
+        badge: "VIP Member",
+        memberSince: "Oct 2025"
+      },
+      {
+        id: "usr-02",
+        name: "Aarav Singhania",
+        email: "aarav.stylist@luxeglow.com",
+        phone: "9123456789",
+        password: "password123",
+        role: "master-stylist",
+        badge: "Master Creative Director",
+        memberSince: "Jan 2024"
+      }
+    ];
+
+    function initUserDatabase() {
+      if (!localStorage.getItem(AUTH_KEYS.USERS_LIST)) {
+        localStorage.setItem(AUTH_KEYS.USERS_LIST, JSON.stringify(DEMO_USERS));
+      }
+    }
+
+    function getRegisteredUsers() {
+      try {
+        return JSON.parse(localStorage.getItem(AUTH_KEYS.USERS_LIST)) || DEMO_USERS;
+      } catch (e) {
+        return DEMO_USERS;
+      }
+    }
+
+    function saveUserSession(user) {
+      localStorage.setItem(AUTH_KEYS.CURRENT_USER, JSON.stringify(user));
+    }
+
+    function showToast(title, message, type = "info") {
+      const container = document.getElementById("toastContainer");
+      if (!container) return;
+
+      const toast = document.createElement("div");
+      toast.className = `toast ${type}`;
+
+      const iconClass = type === "success" 
+        ? "fa-solid fa-circle-check" 
+        : type === "danger" 
+        ? "fa-solid fa-triangle-exclamation" 
+        : "fa-solid fa-bell";
+
+      toast.innerHTML = `
+        <i class="${iconClass} toast-icon"></i>
+        <div class="toast-content">
+          <div class="toast-title">${title}</div>
+          <div class="toast-message">${message}</div>
+        </div>
+        <button class="toast-close-btn" aria-label="Dismiss">&times;</button>
+      `;
+
+      toast.querySelector(".toast-close-btn").onclick = () => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+      };
+
+      container.appendChild(toast);
+      requestAnimationFrame(() => toast.classList.add("show"));
+
+      setTimeout(() => {
+        if (toast.parentElement) {
+          toast.classList.remove("show");
+          setTimeout(() => toast.remove(), 350);
+        }
+      }, 4000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initUserDatabase();
+
+      // Check if already logged in -> prompt redirect
+      const existingUser = localStorage.getItem(AUTH_KEYS.CURRENT_USER);
+      if (existingUser) {
+        try {
+          const userObj = JSON.parse(existingUser);
+          showToast("Already Signed In", `Logged in as ${userObj.name}. Redirecting to sanctuary...`, "info");
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1400);
+        } catch (e) {}
+      }
+
+      // Tab Switching
+      const tabSignInBtn = document.getElementById("tabSignInBtn");
+      const tabSignUpBtn = document.getElementById("tabSignUpBtn");
+      const loginSection = document.getElementById("loginFormSection");
+      const registerSection = document.getElementById("registerFormSection");
+
+      tabSignInBtn.addEventListener("click", () => {
+        tabSignInBtn.classList.add("active");
+        tabSignUpBtn.classList.remove("active");
+        loginSection.classList.add("active");
+        registerSection.classList.remove("active");
+      });
+
+      tabSignUpBtn.addEventListener("click", () => {
+        tabSignUpBtn.classList.add("active");
+        tabSignInBtn.classList.remove("active");
+        registerSection.classList.add("active");
+        loginSection.classList.remove("active");
+      });
+
+      // Password Visibility Toggle
+      document.querySelectorAll(".toggle-password-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const input = btn.previousElementSibling;
+          const icon = btn.querySelector("i");
+          if (input.type === "password") {
+            input.type = "text";
+            icon.className = "fa-regular fa-eye-slash";
+          } else {
+            input.type = "password";
+            icon.className = "fa-regular fa-eye";
+          }
+        });
+      });
+
+      // Quick Demo Buttons
+      document.getElementById("demoClientBtn").addEventListener("click", () => {
+        tabSignInBtn.click();
+        document.getElementById("loginEmail").value = "radhika.sen@example.com";
+        document.getElementById("loginPassword").value = "password123";
+        showToast("Demo Loaded", "Dr. Radhika Sen's credentials loaded. Click 'Sign In'.", "info");
+      });
+
+      document.getElementById("demoStaffBtn").addEventListener("click", () => {
+        tabSignInBtn.click();
+        document.getElementById("loginEmail").value = "aarav.stylist@luxeglow.com";
+        document.getElementById("loginPassword").value = "password123";
+        showToast("Demo Loaded", "Master Stylist Aarav's credentials loaded.", "info");
+      });
+
+      // Live Password Strength Meter
+      const regPass = document.getElementById("registerPassword");
+      const strengthBar = document.getElementById("strengthIndicator");
+      const strengthText = document.getElementById("strengthText");
+
+      regPass.addEventListener("input", (e) => {
+        const val = e.target.value;
+        if (!val) {
+          strengthBar.style.width = "0%";
+          strengthBar.style.background = "#D3C7BD";
+          strengthText.textContent = "Password Strength: None";
+          return;
+        }
+
+        let score = 0;
+        if (val.length >= 6) score++;
+        if (val.length >= 10) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        if (score <= 2) {
+          strengthBar.style.width = "33%";
+          strengthBar.style.background = "#E53935";
+          strengthText.textContent = "Password Strength: Weak (add numbers/capitals)";
+          strengthText.style.color = "#E53935";
+        } else if (score <= 4) {
+          strengthBar.style.width = "66%";
+          strengthBar.style.background = "#FB8C00";
+          strengthText.textContent = "Password Strength: Good (Fair)";
+          strengthText.style.color = "#FB8C00";
+        } else {
+          strengthBar.style.width = "100%";
+          strengthBar.style.background = "#2E7D32";
+          strengthText.textContent = "Password Strength: Strong & Secure ✨";
+          strengthText.style.color = "#2E7D32";
+        }
+      });
+
+      // Forgot Password Modal / Alert
+      document.getElementById("forgotPasswordLink").addEventListener("click", (e) => {
+        e.preventDefault();
+        const email = prompt("Enter your registered email address to receive password reset link:");
+        if (email) {
+          showToast("Reset Link Dispatched", `A secure password reset link has been sent to ${email}.`, "success");
+        }
+      });
+
+      // Handle Sign In Submit
+      document.getElementById("loginForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById("loginEmail");
+        const passInput = document.getElementById("loginPassword");
+        const emailErr = document.getElementById("loginEmailError");
+        const passErr = document.getElementById("loginPasswordError");
+
+        let isValid = true;
+        const emailVal = emailInput.value.trim().toLowerCase();
+        const passVal = passInput.value.trim();
+
+        if (!emailVal) {
+          emailInput.classList.add("is-invalid");
+          emailErr.classList.add("visible");
+          isValid = false;
+        } else {
+          emailInput.classList.remove("is-invalid");
+          emailErr.classList.remove("visible");
+        }
+
+        if (!passVal || passVal.length < 6) {
+          passInput.classList.add("is-invalid");
+          passErr.classList.add("visible");
+          isValid = false;
+        } else {
+          passInput.classList.remove("is-invalid");
+          passErr.classList.remove("visible");
+        }
+
+        if (!isValid) return;
+
+        // Button loading state
+        const submitBtn = document.getElementById("loginSubmitBtn");
+        submitBtn.querySelector(".btn-text").classList.add("hidden");
+        submitBtn.querySelector(".btn-loader").classList.remove("hidden");
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          const users = getRegisteredUsers();
+          const matchedUser = users.find(u => 
+            (u.email.toLowerCase() === emailVal || u.phone === emailVal) && 
+            u.password === passVal
+          );
+
+          if (matchedUser) {
+            saveUserSession(matchedUser);
+            showToast("Welcome Back!", `Welcome back, ${matchedUser.name}! Loading sanctuary...`, "success");
+            setTimeout(() => {
+              window.location.href = "index.html";
+            }, 900);
+          } else {
+            // Check if user exists with another password or accept fallback demo
+            submitBtn.querySelector(".btn-text").classList.remove("hidden");
+            submitBtn.querySelector(".btn-loader").classList.add("hidden");
+            submitBtn.disabled = false;
+            showToast("Invalid Credentials", "Incorrect email/mobile or password. Try our Client Demo button!", "danger");
+          }
+        }, 600);
+      });
+
+      // Handle Sign Up Submit
+      document.getElementById("registerForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById("registerName");
+        const phoneInput = document.getElementById("registerPhone");
+        const emailInput = document.getElementById("registerEmail");
+        const passInput = document.getElementById("registerPassword");
+        const termsCheck = document.getElementById("registerTermsCheckbox");
+
+        let isValid = true;
+
+        if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+          nameInput.classList.add("is-invalid");
+          document.getElementById("registerNameError").classList.add("visible");
+          isValid = false;
+        } else {
+          nameInput.classList.remove("is-invalid");
+          document.getElementById("registerNameError").classList.remove("visible");
+        }
+
+        const phoneClean = phoneInput.value.replace(/\D/g, "");
+        if (phoneClean.length !== 10) {
+          phoneInput.classList.add("is-invalid");
+          document.getElementById("registerPhoneError").classList.add("visible");
+          isValid = false;
+        } else {
+          phoneInput.classList.remove("is-invalid");
+          document.getElementById("registerPhoneError").classList.remove("visible");
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+          emailInput.classList.add("is-invalid");
+          document.getElementById("registerEmailError").classList.add("visible");
+          isValid = false;
+        } else {
+          emailInput.classList.remove("is-invalid");
+          document.getElementById("registerEmailError").classList.remove("visible");
+        }
+
+        if (!passInput.value || passInput.value.length < 6) {
+          passInput.classList.add("is-invalid");
+          document.getElementById("registerPasswordError").classList.add("visible");
+          isValid = false;
+        } else {
+          passInput.classList.remove("is-invalid");
+          document.getElementById("registerPasswordError").classList.remove("visible");
+        }
+
+        if (!termsCheck.checked) {
+          document.getElementById("registerTermsError").classList.add("visible");
+          isValid = false;
+        } else {
+          document.getElementById("registerTermsError").classList.remove("visible");
+        }
+
+        if (!isValid) return;
+
+        // Button loading state
+        const submitBtn = document.getElementById("registerSubmitBtn");
+        submitBtn.querySelector(".btn-text").classList.add("hidden");
+        submitBtn.querySelector(".btn-loader").classList.remove("hidden");
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          const users = getRegisteredUsers();
+          const newUser = {
+            id: `usr-${Date.now()}`,
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim().toLowerCase(),
+            phone: phoneClean,
+            password: passInput.value,
+            role: "vip-client",
+            badge: "VIP Member",
+            preferredCategory: document.getElementById("registerServicePref").value,
+            memberSince: "Nov 2026"
+          };
+
+          users.push(newUser);
+          localStorage.setItem(AUTH_KEYS.USERS_LIST, JSON.stringify(users));
+          saveUserSession(newUser);
+
+          showToast("VIP Account Created!", `Welcome to LuxeGlow Sanctuary, ${newUser.name}!`, "success");
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1000);
+        }, 700);
+      });
+
+      // Social Auth Mock Buttons
+      document.getElementById("googleAuthBtn").onclick = () => {
+        showToast("Google Authentication", "Simulating Google Sign-In...", "info");
+        setTimeout(() => {
+          document.getElementById("demoClientBtn").click();
+          document.getElementById("loginSubmitBtn").click();
+        }, 600);
+      };
+
+      document.getElementById("appleAuthBtn").onclick = () => {
+        showToast("Apple ID Authentication", "Simulating Apple Sign-In...", "info");
+        setTimeout(() => {
+          document.getElementById("demoClientBtn").click();
+          document.getElementById("loginSubmitBtn").click();
+        }, 600);
+      };
+    });
+  </script>
+</body>
+</html>
