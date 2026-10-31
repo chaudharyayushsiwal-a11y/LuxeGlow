@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LuxeGlow | Luxury Beauty Salon & Spa Appointment Booking System
  * Vanilla JavaScript: State Management, Interactive Booking Engine, 
  * LocalStorage Persistence, Dynamic Rendering & Real-time Validation.
@@ -447,7 +447,7 @@ function renderServices(filteredServices = SERVICES_DATA) {
     card.className = "service-card";
     card.innerHTML = `
       <div class="service-img-wrapper">
-        <img src="${service.image}" alt="${service.name}" loading="lazy" onerror="this.src='assets/images/fallback.svg'">
+        <img src="${service.image}" alt="${service.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3BhR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0VCRTgiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRUFEN0QxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDNTlCNkQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNzcGFHcmFkKSIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjI3MCIgcj0iMTAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTQwMCwyMDAgQzQzMCwyNDAgNDYwLDI4MCA0MzAsMzMwIEM0MDAsMzcwIDM3MCwzMzAgMzcwLDI4MCBaIiBmaWxsPSIjQzU5QjZEIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSInUGxheWZhaXIgRGlzcGxheScsIEdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJDMjUyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkxVWEVHTE9XIFNBTkNUVUFSWTwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjQ1NSIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2RTY0NUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5BcnRpc2FuYWwgU2Fsb24gJmFtcDsgSG9saXN0aWMgU3BhPC90ZXh0Pgo8L3N2Zz4='">
         <span class="service-badge">${service.badge}</span>
         <span class="service-duration-badge"><i class="fa-regular fa-clock"></i> ${service.duration} Mins</span>
       </div>
@@ -497,7 +497,7 @@ function renderStylists() {
     card.className = "stylist-card";
     card.innerHTML = `
       <div class="stylist-photo-wrapper">
-        <img src="${stylist.image}" alt="${stylist.name}" loading="lazy" onerror="this.src='assets/images/fallback.svg'">
+        <img src="${stylist.image}" alt="${stylist.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3BhR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0VCRTgiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRUFEN0QxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDNTlCNkQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNzcGFHcmFkKSIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjI3MCIgcj0iMTAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTQwMCwyMDAgQzQzMCwyNDAgNDYwLDI4MCA0MzAsMzMwIEM0MDAsMzcwIDM3MCwzMzAgMzcwLDI4MCBaIiBmaWxsPSIjQzU5QjZEIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSInUGxheWZhaXIgRGlzcGxheScsIEdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJDMjUyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkxVWEVHTE9XIFNBTkNUVUFSWTwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjQ1NSIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2RTY0NUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5BcnRpc2FuYWwgU2Fsb24gJmFtcDsgSG9saXN0aWMgU3BhPC90ZXh0Pgo8L3N2Zz4='">
         <span class="stylist-verified-badge" title="Master Certified Stylist"><i class="fa-solid fa-certificate"></i></span>
         <span class="stylist-experience-badge"><i class="fa-solid fa-briefcase"></i> ${stylist.experience} Exp</span>
       </div>
@@ -733,7 +733,7 @@ function renderReviews() {
 
     card.innerHTML = `
       <div class="review-card-top">
-        <img src="${review.avatar}" alt="${review.author}" class="reviewer-avatar" onerror="this.src='assets/images/fallback.svg'">
+        <img src="${review.avatar}" alt="${review.author}" class="reviewer-avatar" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3BhR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0VCRTgiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRUFEN0QxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDNTlCNkQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNzcGFHcmFkKSIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjI3MCIgcj0iMTAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTQwMCwyMDAgQzQzMCwyNDAgNDYwLDI4MCA0MzAsMzMwIEM0MDAsMzcwIDM3MCwzMzAgMzcwLDI4MCBaIiBmaWxsPSIjQzU5QjZEIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSInUGxheWZhaXIgRGlzcGxheScsIEdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJDMjUyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkxVWEVHTE9XIFNBTkNUVUFSWTwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjQ1NSIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2RTY0NUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5BcnRpc2FuYWwgU2Fsb24gJmFtcDsgSG9saXN0aWMgU3BhPC90ZXh0Pgo8L3N2Zz4='">
         <div class="reviewer-info">
           <strong class="reviewer-name">${review.author}</strong>
           <span class="service-used-tag"><i class="fa-solid fa-sparkles"></i> ${review.service}</span>
@@ -1745,7 +1745,7 @@ function openStylistModal(stylistId) {
   modalBody.innerHTML = `
     <div class="stylist-modal-grid">
       <div class="stylist-modal-portrait">
-        <img src="${stylist.image}" alt="${stylist.name}" onerror="this.src='assets/images/fallback.svg'">
+        <img src="${stylist.image}" alt="${stylist.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3BhR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0VCRTgiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRUFEN0QxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDNTlCNkQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNzcGFHcmFkKSIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjI3MCIgcj0iMTAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTQwMCwyMDAgQzQzMCwyNDAgNDYwLDI4MCA0MzAsMzMwIEM0MDAsMzcwIDM3MCwzMzAgMzcwLDI4MCBaIiBmaWxsPSIjQzU5QjZEIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSInUGxheWZhaXIgRGlzcGxheScsIEdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJDMjUyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkxVWEVHTE9XIFNBTkNUVUFSWTwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjQ1NSIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2RTY0NUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5BcnRpc2FuYWwgU2Fsb24gJmFtcDsgSG9saXN0aWMgU3BhPC90ZXh0Pgo8L3N2Zz4='">
       </div>
       <div class="stylist-modal-details">
         <h3>${stylist.name}</h3>
@@ -1767,7 +1767,7 @@ function openStylistModal(stylistId) {
 
         <span class="stylist-gallery-title"><i class="fa-solid fa-camera-retro"></i> Recent Transformations</span>
         <div class="stylist-mini-gallery">
-          ${stylist.portfolio.map(img => `<img src="${img}" alt="Client Work" loading="lazy" onerror="this.src='assets/images/fallback.svg'">`).join("")}
+          ${stylist.portfolio.map(img => `<img src="${img}" alt="Client Work" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNjAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3BhR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0VCRTgiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRUFEN0QxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDNTlCNkQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNzcGFHcmFkKSIvPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjI3MCIgcj0iMTAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTQwMCwyMDAgQzQzMCwyNDAgNDYwLDI4MCA0MzAsMzMwIEM0MDAsMzcwIDM3MCwzMzAgMzcwLDI4MCBaIiBmaWxsPSIjQzU5QjZEIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSInUGxheWZhaXIgRGlzcGxheScsIEdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJDMjUyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkxVWEVHTE9XIFNBTkNUVUFSWTwvdGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjQ1NSIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2RTY0NUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5BcnRpc2FuYWwgU2Fsb24gJmFtcDsgSG9saXN0aWMgU3BhPC90ZXh0Pgo8L3N2Zz4='">`).join("")}
         </div>
 
         <button class="btn btn-luxury btn-block" id="modalBookStylistBtn">
@@ -2487,6 +2487,14 @@ function setupSpatialFlightWindow() {
     }
 
     if (gyroLabel) gyroLabel.textContent = "3D Cursor Tilt: Dynamic";
+    const anglesEl = document.getElementById("spatialAngles");
+    if (anglesEl) {
+      anglesEl.textContent = `Pitch: ${targetTiltX.toFixed(1)}° | Yaw: ${targetTiltY.toFixed(1)}°`;
+    }
+    const reticle = document.getElementById("spatialReticle");
+    if (reticle) {
+      reticle.style.transform = `translate(${normX * 38}px, ${normY * 26}px) rotate(${normX * 8}deg)`;
+    }
   });
 
   stageEl.addEventListener("mouseleave", () => {
@@ -2497,6 +2505,10 @@ function setupSpatialFlightWindow() {
       reflection.style.opacity = "0.5";
     }
     if (gyroLabel) gyroLabel.textContent = "Interactive Cursor Tilt";
+    const anglesEl = document.getElementById("spatialAngles");
+    if (anglesEl) anglesEl.textContent = "Pitch: 0.0° | Yaw: 0.0°";
+    const reticle = document.getElementById("spatialReticle");
+    if (reticle) reticle.style.transform = "translate(0, 0) rotate(0deg)";
   });
 
   // Camera Flight Controls
@@ -2662,11 +2674,46 @@ function setupSpatialAtmosphereCanvas() {
   requestAnimationFrame(drawAtmosphere);
 }
 
-// 3. Interactive 3D Card Hover Physics
+// Global tracking for price animation
+let lastRecordedTotalPrice = 0;
+
+function animatePriceCount(element, startPrice, endPrice, duration = 400) {
+  if (!element) return;
+  element.classList.add("price-pulse-highlight");
+  setTimeout(() => element.classList.remove("price-pulse-highlight"), 600);
+
+  if (startPrice === endPrice) {
+    element.textContent = `? ${endPrice.toLocaleString("en-IN")}`;
+    return;
+  }
+
+  const startTime = performance.now();
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easeOut = 1 - Math.pow(1 - progress, 3);
+    const currentPrice = Math.round(startPrice + (endPrice - startPrice) * easeOut);
+    element.textContent = `? ${currentPrice.toLocaleString("en-IN")}`;
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = `? ${endPrice.toLocaleString("en-IN")}`;
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+// 3. Interactive 3D Card Hover Physics & Specular Glare
 function setupInteractive3DCardTilt() {
-  const tiltCards = document.querySelectorAll(".service-card, .stylist-card, .pillar-card");
+  const tiltCards = document.querySelectorAll(".service-card, .stylist-card, .pillar-card, .promo-banner-card");
 
   tiltCards.forEach(card => {
+    if (!card.querySelector(".card-specular-glare")) {
+      const glare = document.createElement("div");
+      glare.className = "card-specular-glare";
+      card.appendChild(glare);
+    }
+
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -2675,10 +2722,12 @@ function setupInteractive3DCardTilt() {
       const normX = (x / rect.width) * 2 - 1;
       const normY = (y / rect.height) * 2 - 1;
 
-      const tiltX = -normY * 9;
-      const tiltY = normX * 9;
+      const tiltX = -normY * 11;
+      const tiltY = normX * 11;
 
-      card.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+      card.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translateY(-8px) scale(1.025)`;
+      card.style.setProperty("--mouse-x", `${((x / rect.width) * 100).toFixed(1)}%`);
+      card.style.setProperty("--mouse-y", `${((y / rect.height) * 100).toFixed(1)}%`);
     });
 
     card.addEventListener("mouseleave", () => {
@@ -2687,19 +2736,367 @@ function setupInteractive3DCardTilt() {
   });
 }
 
+// 4. Global Interactive Ambient 3D Particle & Petal Canvas
+function setupGlobalAtmosphereCanvas() {
+  const canvas = document.getElementById("globalAtmosphereCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let width, height;
+  let particles = [];
+  const PARTICLE_COUNT = 38;
+  let lastScrollY = window.pageYOffset;
+  let scrollVelocity = 0;
+  let mouseX = -1000;
+  let mouseY = -1000;
+
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, { passive: true });
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.pageYOffset;
+    const delta = currentScrollY - lastScrollY;
+    scrollVelocity = Math.min(25, Math.max(-25, delta * 0.25));
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+
+  class AtmosphereParticle {
+    constructor() {
+      this.reset(true);
+    }
+
+    reset(initial = false) {
+      this.x = Math.random() * (width || window.innerWidth);
+      this.y = initial ? Math.random() * (height || window.innerHeight) : (scrollVelocity >= 0 ? -20 : (height || window.innerHeight) + 20);
+      this.type = Math.random() > 0.4 ? "dust" : (Math.random() > 0.3 ? "petal" : "orb");
+      
+      if (this.type === "dust") {
+        this.size = Math.random() * 2.2 + 0.8;
+        this.baseVy = Math.random() * 0.45 + 0.15;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.alpha = Math.random() * 0.5 + 0.25;
+        this.color = Math.random() > 0.5 ? "rgba(229, 192, 123," : "rgba(197, 155, 109,";
+      } else if (this.type === "petal") {
+        this.size = Math.random() * 6 + 4;
+        this.baseVy = Math.random() * 0.6 + 0.3;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.02;
+        this.alpha = Math.random() * 0.35 + 0.2;
+        this.oscillation = Math.random() * 10;
+        this.color = "rgba(234, 182, 172,";
+      } else {
+        this.size = Math.random() * 24 + 14;
+        this.baseVy = Math.random() * 0.25 + 0.08;
+        this.vx = (Math.random() - 0.5) * 0.2;
+        this.alpha = Math.random() * 0.15 + 0.08;
+        this.color = "rgba(229, 192, 123,";
+      }
+    }
+
+    update() {
+      this.y += this.baseVy + scrollVelocity * 0.4;
+      this.x += this.vx;
+
+      if (this.type === "petal") {
+        this.rotation += this.rotSpeed;
+        this.oscillation += 0.025;
+        this.x += Math.sin(this.oscillation) * 0.35;
+      }
+
+      const dx = this.x - mouseX;
+      const dy = this.y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 110) {
+        const force = (110 - dist) / 110;
+        this.x += (dx / dist) * force * 2.5;
+        this.y += (dy / dist) * force * 2.5;
+      }
+
+      if (this.y > height + 30 || this.y < -30 || this.x > width + 30 || this.x < -30) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.save();
+      if (this.type === "dust") {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `${this.color}${this.alpha})`;
+        ctx.shadowColor = "rgba(229, 192, 123, 0.6)";
+        ctx.shadowBlur = 6;
+        ctx.fill();
+      } else if (this.type === "petal") {
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, this.size, this.size * 0.55, 0, 0, Math.PI * 2);
+        ctx.fillStyle = `${this.color}${this.alpha})`;
+        ctx.fill();
+      } else {
+        const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        grad.addColorStop(0, `${this.color}${this.alpha})`);
+        grad.addColorStop(1, `${this.color}0)`);
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new AtmosphereParticle());
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, width, height);
+    scrollVelocity *= 0.92;
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+}
+
+// 5. Luxury Interactive Cursor Spotlight Aura
+function setupCursorSpotlight() {
+  const spotlight = document.getElementById("cursorSpotlight");
+  if (!spotlight || window.innerWidth <= 992) return;
+
+  let currentX = window.innerWidth / 2;
+  let currentY = window.innerHeight / 2;
+  let targetX = currentX;
+  let targetY = currentY;
+  let isMoving = false;
+
+  window.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    if (!isMoving) {
+      spotlight.classList.add("active");
+      isMoving = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener("mouseleave", () => {
+    spotlight.classList.remove("active");
+    isMoving = false;
+  });
+
+  const hoverTargets = document.querySelectorAll("a, button, .service-card, .stylist-card, .pillar-card, .spatial-flight-window");
+  hoverTargets.forEach(el => {
+    el.addEventListener("mouseenter", () => spotlight.classList.add("hovering"));
+    el.addEventListener("mouseleave", () => spotlight.classList.remove("hovering"));
+  });
+
+  function renderSpotlight() {
+    currentX += (targetX - currentX) * 0.14;
+    currentY += (targetY - currentY) * 0.14;
+    spotlight.style.transform = `translate3d(${currentX.toFixed(1)}px, ${currentY.toFixed(1)}px, 0)`;
+    requestAnimationFrame(renderSpotlight);
+  }
+  requestAnimationFrame(renderSpotlight);
+}
+
+// 6. Hero Multi-Layer 3D Depth & Scroll Parallax
+function setupHero3DParallax() {
+  const heroSection = document.getElementById("home");
+  const heroStage = document.getElementById("hero3DStage");
+  const heroLeftCard = document.querySelector(".hero-float-card-left");
+  const heroRightCard = document.querySelector(".hero-float-card-right");
+  const heroBg = document.querySelector(".hero-bg-wrapper");
+
+  if (!heroSection || !heroStage) return;
+
+  heroSection.addEventListener("mousemove", (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+
+    const tiltX = -normY * 6;
+    const tiltY = normX * 6;
+
+    heroStage.style.transform = `perspective(1200px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg)`;
+
+    if (heroLeftCard) {
+      heroLeftCard.style.transform = `translate3d(${-normX * 18}px, ${-normY * 18}px, 45px)`;
+    }
+    if (heroRightCard) {
+      heroRightCard.style.transform = `translate3d(${normX * 22}px, ${normY * 22}px, 50px)`;
+    }
+  });
+
+  heroSection.addEventListener("mouseleave", () => {
+    heroStage.style.transform = "";
+    if (heroLeftCard) heroLeftCard.style.transform = "";
+    if (heroRightCard) heroRightCard.style.transform = "";
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset < window.innerHeight) {
+      const scrollY = window.pageYOffset;
+      if (heroBg) {
+        heroBg.style.transform = `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0003})`;
+      }
+    }
+  }, { passive: true });
+}
+
+// 7. Interactive Golden Button Water Ripple Effect
+function setupButtonRippleEffect() {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn, .time-slot-btn, .category-pill, .spatial-flight-btn, .btn-demo-quick");
+    if (!btn) return;
+
+    const rect = btn.getBoundingClientRect();
+    const ripple = document.createElement("span");
+    ripple.className = "gold-ripple";
+    
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+    btn.style.position = "relative";
+    btn.style.overflow = "hidden";
+    btn.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 700);
+  });
+}
+
+// 8. Scroll Velocity Skew on Trending Marquee Ticker
+function setupScrollVelocityEffects() {
+  const tickerTrack = document.querySelector(".trending-ticker-track");
+  let lastY = window.pageYOffset;
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentY = window.pageYOffset;
+        const delta = currentY - lastY;
+        const skew = Math.min(3, Math.max(-3, delta * 0.08));
+
+        if (tickerTrack) {
+          tickerTrack.style.transform = `skewX(${skew.toFixed(2)}deg)`;
+        }
+
+        clearTimeout(tickerTrack?._skewTimer);
+        if (tickerTrack) {
+          tickerTrack._skewTimer = setTimeout(() => {
+            tickerTrack.style.transform = "skewX(0deg)";
+          }, 150);
+        }
+
+        lastY = currentY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
 // ==========================================================================
-// 12. USER AUTHENTICATION & SESSION CONTROLLER
+// 12. USER AUTHENTICATION & VIP SANCTUARY CONTROLLER
 // ==========================================================================
 
-const AUTH_STORAGE_KEY = "luxeglow_current_user";
+const AUTH_KEYS = {
+  CURRENT_USER: "luxeglow_current_user",
+  USERS_LIST: "luxeglow_registered_users"
+};
+
+const DEFAULT_DEMO_USERS = [
+  {
+    id: "usr-01",
+    name: "Dr. Radhika Sen",
+    email: "radhika.sen@example.com",
+    phone: "9876543210",
+    password: "password123",
+    role: "vip-client",
+    badge: "VIP Gold Member",
+    memberSince: "Oct 2025"
+  },
+  {
+    id: "usr-02",
+    name: "Aarav Singhania",
+    email: "aarav.stylist@luxeglow.com",
+    phone: "9123456789",
+    password: "password123",
+    role: "master-stylist",
+    badge: "Master Creative Director",
+    memberSince: "Jan 2024"
+  }
+];
+
+function initUserDatabase() {
+  try {
+    if (!localStorage.getItem(AUTH_KEYS.USERS_LIST)) {
+      localStorage.setItem(AUTH_KEYS.USERS_LIST, JSON.stringify(DEFAULT_DEMO_USERS));
+    }
+  } catch (e) {
+    console.warn("LocalStorage unavailable for user DB:", e);
+  }
+}
+
+function getRegisteredUsers() {
+  try {
+    const raw = localStorage.getItem(AUTH_KEYS.USERS_LIST);
+    return raw ? JSON.parse(raw) : DEFAULT_DEMO_USERS;
+  } catch (e) {
+    return DEFAULT_DEMO_USERS;
+  }
+}
 
 function getCurrentUser() {
   try {
-    const raw = localStorage.getItem(AUTH_STORAGE_KEY);
+    const raw = localStorage.getItem(AUTH_KEYS.CURRENT_USER);
     return raw ? JSON.parse(raw) : null;
   } catch (e) {
     return null;
   }
+}
+
+function saveUserSession(user) {
+  try {
+    localStorage.setItem(AUTH_KEYS.CURRENT_USER, JSON.stringify(user));
+  } catch (e) {
+    console.warn("Could not save session:", e);
+  }
+}
+
+function openAuthModal(defaultTab = 'signin') {
+  const modal = document.getElementById("authModal");
+  if (!modal) return;
+  openModal(modal);
+
+  if (defaultTab === 'signup') {
+    const signupBtn = document.getElementById("modalTabSignUpBtn");
+    if (signupBtn) signupBtn.click();
+  } else {
+    const signinBtn = document.getElementById("modalTabSignInBtn");
+    if (signinBtn) signinBtn.click();
+  }
+}
+
+function closeAuthModal() {
+  const modal = document.getElementById("authModal");
+  if (modal) closeModal(modal);
 }
 
 function setupUserAuthentication() {
@@ -2711,7 +3108,7 @@ function setupUserAuthentication() {
 
   if (user) {
     // Generate initials for avatar badge
-    const nameParts = user.name.split(" ");
+    const nameParts = user.name.trim().split(" ");
     const initials = nameParts.length >= 2 
       ? (nameParts[0][0] + nameParts[1][0]).toUpperCase() 
       : user.name.substring(0, 2).toUpperCase();
@@ -2721,17 +3118,17 @@ function setupUserAuthentication() {
       <div class="user-profile-menu" id="userProfileMenu">
         <button type="button" class="user-profile-trigger" id="userProfileTrigger" aria-label="User Account Menu" aria-expanded="false">
           <div class="user-avatar-badge">${initials}</div>
-          <span class="user-greeting">Hi, ${nameParts[0]}</span>
+          <span class="user-greeting">Hi, ${escapeHtml(nameParts[0])}</span>
           <i class="fa-solid fa-chevron-down user-chevron"></i>
         </button>
         <div class="user-dropdown-pane" id="userDropdownPane">
           <div class="dropdown-user-info">
-            <strong>${user.name}</strong>
-            <span class="vip-status-tag"><i class="fa-solid fa-crown"></i> ${user.badge || 'VIP Member'}</span>
+            <strong>${escapeHtml(user.name)}</strong>
+            <span class="vip-status-tag"><i class="fa-solid fa-crown text-gold"></i> ${escapeHtml(user.badge || 'VIP Member')}</span>
           </div>
           <div class="dropdown-divider"></div>
-          <a href="#my-bookings" class="dropdown-item"><i class="fa-solid fa-calendar-check"></i> My Bookings</a>
-          <a href="#booking" class="dropdown-item"><i class="fa-solid fa-sparkles"></i> New Reservation</a>
+          <a href="#my-bookings" class="dropdown-item" id="menuMyBookingsLink"><i class="fa-solid fa-calendar-check"></i> My Bookings</a>
+          <a href="#booking" class="dropdown-item" id="menuNewReservationLink"><i class="fa-solid fa-sparkles"></i> New Reservation</a>
           <div class="dropdown-divider"></div>
           <button type="button" class="dropdown-item logout-btn" id="logoutBtn">
             <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
@@ -2766,25 +3163,55 @@ function setupUserAuthentication() {
       });
     }
 
+    // Dropdown menu links smooth scroll
+    const menuBookings = document.getElementById("menuMyBookingsLink");
+    if (menuBookings) {
+      menuBookings.addEventListener("click", (e) => {
+        e.preventDefault();
+        menu.classList.remove("open");
+        scrollToSection("my-bookings");
+      });
+    }
+
+    const menuReservation = document.getElementById("menuNewReservationLink");
+    if (menuReservation) {
+      menuReservation.addEventListener("click", (e) => {
+        e.preventDefault();
+        menu.classList.remove("open");
+        scrollToSection("booking");
+      });
+    }
+
     // Logout button handler
     const logoutBtn = document.getElementById("logoutBtn");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", () => {
-        localStorage.removeItem(AUTH_STORAGE_KEY);
+        localStorage.removeItem(AUTH_KEYS.CURRENT_USER);
         showToast("Signed Out", "You have securely signed out of your sanctuary session.", "info");
-        setTimeout(() => {
-          setupUserAuthentication();
-        }, 300);
+        setupUserAuthentication();
       });
     }
 
     // Update Mobile Nav link
     if (mobileAuthItem) {
       mobileAuthItem.innerHTML = `
-        <a href="#my-bookings" class="nav-link">
-          <i class="fa-solid fa-crown"></i> ${user.name} (VIP)
+        <a href="#my-bookings" class="nav-link" id="mobileUserLink">
+          <i class="fa-solid fa-crown text-gold"></i> ${escapeHtml(user.name)} (VIP)
         </a>
       `;
+      const mobileUserLink = document.getElementById("mobileUserLink");
+      if (mobileUserLink) {
+        mobileUserLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          const navToggle = document.getElementById("navToggle");
+          const navMenu = document.getElementById("navMenu");
+          if (navMenu && navToggle) {
+            navMenu.classList.remove("active");
+            navToggle.classList.remove("active");
+          }
+          scrollToSection("my-bookings");
+        });
+      }
     }
 
     // Pre-fill Appointment Booking Form inputs if empty
@@ -2797,20 +3224,357 @@ function setupUserAuthentication() {
     if (emailInput && !emailInput.value && user.email) emailInput.value = user.email;
 
   } else {
-    // Guest state
+    // Guest state: clicking Sign In opens #authModal directly
     navAuthWrapper.innerHTML = `
-      <a href="login.html" class="btn btn-outline btn-sm nav-login-btn" id="navLoginBtn">
+      <button type="button" class="btn btn-outline btn-sm nav-login-btn" id="navLoginBtn">
         <i class="fa-regular fa-user"></i> Sign In
-      </a>
+      </button>
     `;
+
+    const navLoginBtn = document.getElementById("navLoginBtn");
+    if (navLoginBtn) {
+      navLoginBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openAuthModal('signin');
+      });
+    }
 
     if (mobileAuthItem) {
       mobileAuthItem.innerHTML = `
-        <a href="login.html" class="nav-link">
+        <a href="#authModal" class="nav-link" id="mobileAuthLink">
           <i class="fa-regular fa-user"></i> Sign In / VIP Club
         </a>
       `;
+      const mobileLink = document.getElementById("mobileAuthLink");
+      if (mobileLink) {
+        mobileLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          const navToggle = document.getElementById("navToggle");
+          const navMenu = document.getElementById("navMenu");
+          if (navMenu && navToggle) {
+            navMenu.classList.remove("active");
+            navToggle.classList.remove("active");
+          }
+          openAuthModal('signin');
+        });
+      }
     }
+  }
+}
+
+function setupAuthModalListeners() {
+  const modal = document.getElementById("authModal");
+  const closeBtn = document.getElementById("closeAuthModalBtn");
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", () => closeModal(modal));
+  }
+
+  // Tabs
+  const tabSignIn = document.getElementById("modalTabSignInBtn");
+  const tabSignUp = document.getElementById("modalTabSignUpBtn");
+  const sectionSignIn = document.getElementById("modalLoginFormSection");
+  const sectionSignUp = document.getElementById("modalRegisterFormSection");
+
+  if (tabSignIn && tabSignUp && sectionSignIn && sectionSignUp) {
+    tabSignIn.addEventListener("click", () => {
+      tabSignIn.classList.add("active");
+      tabSignUp.classList.remove("active");
+      sectionSignIn.classList.add("active");
+      sectionSignUp.classList.remove("active");
+    });
+
+    tabSignUp.addEventListener("click", () => {
+      tabSignUp.classList.add("active");
+      tabSignIn.classList.remove("active");
+      sectionSignUp.classList.add("active");
+      sectionSignIn.classList.remove("active");
+    });
+  }
+
+  // Password Visibility Toggles
+  const toggleLoginPass = document.getElementById("modalToggleLoginPassBtn");
+  if (toggleLoginPass) {
+    toggleLoginPass.addEventListener("click", () => {
+      const input = document.getElementById("modalLoginPassword");
+      const icon = toggleLoginPass.querySelector("i");
+      if (input.type === "password") {
+        input.type = "text";
+        icon.className = "fa-regular fa-eye-slash";
+      } else {
+        input.type = "password";
+        icon.className = "fa-regular fa-eye";
+      }
+    });
+  }
+
+  const toggleRegPass = document.getElementById("modalToggleRegisterPassBtn");
+  if (toggleRegPass) {
+    toggleRegPass.addEventListener("click", () => {
+      const input = document.getElementById("modalRegisterPassword");
+      const icon = toggleRegPass.querySelector("i");
+      if (input.type === "password") {
+        input.type = "text";
+        icon.className = "fa-regular fa-eye-slash";
+      } else {
+        input.type = "password";
+        icon.className = "fa-regular fa-eye";
+      }
+    });
+  }
+
+  // Quick 1-Click Demo Buttons
+  const clientDemo = document.getElementById("modalDemoClientBtn");
+  if (clientDemo) {
+    clientDemo.addEventListener("click", () => {
+      if (tabSignIn) tabSignIn.click();
+      const emailInput = document.getElementById("modalLoginEmail");
+      const passInput = document.getElementById("modalLoginPassword");
+      if (emailInput) emailInput.value = "radhika.sen@example.com";
+      if (passInput) passInput.value = "password123";
+      showToast("Demo Loaded", "Dr. Radhika Sen's credentials loaded. Click 'Sign In'.", "info");
+    });
+  }
+
+  const staffDemo = document.getElementById("modalDemoStaffBtn");
+  if (staffDemo) {
+    staffDemo.addEventListener("click", () => {
+      if (tabSignIn) tabSignIn.click();
+      const emailInput = document.getElementById("modalLoginEmail");
+      const passInput = document.getElementById("modalLoginPassword");
+      if (emailInput) emailInput.value = "aarav.stylist@luxeglow.com";
+      if (passInput) passInput.value = "password123";
+      showToast("Demo Loaded", "Master Stylist Aarav's credentials loaded.", "info");
+    });
+  }
+
+  // Live Password Strength Meter
+  const regPass = document.getElementById("modalRegisterPassword");
+  const strengthBar = document.getElementById("modalStrengthIndicator");
+  const strengthText = document.getElementById("modalStrengthText");
+  if (regPass && strengthBar && strengthText) {
+    regPass.addEventListener("input", (e) => {
+      const val = e.target.value;
+      if (!val) {
+        strengthBar.style.width = "0%";
+        strengthText.textContent = "Security: Enter password";
+        return;
+      }
+      let score = 0;
+      if (val.length >= 6) score++;
+      if (val.length >= 8) score++;
+      if (/[A-Z]/.test(val)) score++;
+      if (/[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
+
+      if (score <= 2) {
+        strengthBar.style.width = "33%";
+        strengthBar.style.background = "#E06D6D";
+        strengthText.textContent = "Security: Weak (add numbers & capitals)";
+      } else if (score <= 4) {
+        strengthBar.style.width = "66%";
+        strengthBar.style.background = "#E5A84B";
+        strengthText.textContent = "Security: Moderate (good)";
+      } else {
+        strengthBar.style.width = "100%";
+        strengthBar.style.background = "#4CAF50";
+        strengthText.textContent = "Security: Strong & Protected";
+      }
+    });
+  }
+
+  // Handle Sign In Submit
+  const loginForm = document.getElementById("modalLoginForm");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById("modalLoginEmail");
+      const passInput = document.getElementById("modalLoginPassword");
+      const emailErr = document.getElementById("modalLoginEmailError");
+      const passErr = document.getElementById("modalLoginPasswordError");
+
+      let isValid = true;
+      const emailVal = emailInput.value.trim().toLowerCase();
+      const passVal = passInput.value.trim();
+
+      if (!emailVal) {
+        emailInput.classList.add("is-invalid");
+        if (emailErr) emailErr.classList.add("visible");
+        isValid = false;
+      } else {
+        emailInput.classList.remove("is-invalid");
+        if (emailErr) emailErr.classList.remove("visible");
+      }
+
+      if (!passVal || passVal.length < 6) {
+        passInput.classList.add("is-invalid");
+        if (passErr) passErr.classList.add("visible");
+        isValid = false;
+      } else {
+        passInput.classList.remove("is-invalid");
+        if (passErr) passErr.classList.remove("visible");
+      }
+
+      if (!isValid) return;
+
+      const submitBtn = document.getElementById("modalLoginSubmitBtn");
+      const btnText = submitBtn.querySelector(".btn-text");
+      const btnLoader = submitBtn.querySelector(".btn-loader");
+      if (btnText && btnLoader) {
+        btnText.classList.add("hidden");
+        btnLoader.classList.remove("hidden");
+      }
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        const users = getRegisteredUsers();
+        const matched = users.find(u => 
+          (u.email.toLowerCase() === emailVal || u.phone === emailVal) && 
+          u.password === passVal
+        );
+
+        if (matched) {
+          saveUserSession(matched);
+          closeAuthModal();
+          setupUserAuthentication();
+          showToast("Welcome Back!", `Welcome back, ${matched.name}! 10% VIP privilege unlocked.`, "success");
+        } else {
+          // If demo testing with custom credentials, create friendly profile
+          const customUser = {
+            id: "usr-" + Date.now(),
+            name: emailVal.split("@")[0].replace(".", " ").replace(/\b\w/g, l => l.toUpperCase()),
+            email: emailVal.includes("@") ? emailVal : `${emailVal}@luxeglow-vip.com`,
+            phone: /^\d{10}$/.test(emailVal) ? emailVal : "9876543210",
+            badge: "VIP Member"
+          };
+          saveUserSession(customUser);
+          closeAuthModal();
+          setupUserAuthentication();
+          showToast("VIP Authenticated", `Welcome, ${customUser.name}! Session initiated.`, "success");
+        }
+
+        if (btnText && btnLoader) {
+          btnText.classList.remove("hidden");
+          btnLoader.classList.add("hidden");
+        }
+        submitBtn.disabled = false;
+      }, 500);
+    });
+  }
+
+  // Handle Register Submit
+  const regForm = document.getElementById("modalRegisterForm");
+  if (regForm) {
+    regForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById("modalRegisterName");
+      const phoneInput = document.getElementById("modalRegisterPhone");
+      const emailInput = document.getElementById("modalRegisterEmail");
+      const passInput = document.getElementById("modalRegisterPassword");
+      const termsCheckbox = document.getElementById("modalRegisterTermsCheckbox");
+
+      let isValid = true;
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        nameInput.classList.add("is-invalid");
+        const err = document.getElementById("modalRegisterNameError");
+        if (err) err.classList.add("visible");
+        isValid = false;
+      } else {
+        nameInput.classList.remove("is-invalid");
+        const err = document.getElementById("modalRegisterNameError");
+        if (err) err.classList.remove("visible");
+      }
+
+      if (!/^\d{10}$/.test(phoneInput.value.trim())) {
+        phoneInput.classList.add("is-invalid");
+        const err = document.getElementById("modalRegisterPhoneError");
+        if (err) err.classList.add("visible");
+        isValid = false;
+      } else {
+        phoneInput.classList.remove("is-invalid");
+        const err = document.getElementById("modalRegisterPhoneError");
+        if (err) err.classList.remove("visible");
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+        emailInput.classList.add("is-invalid");
+        const err = document.getElementById("modalRegisterEmailError");
+        if (err) err.classList.add("visible");
+        isValid = false;
+      } else {
+        emailInput.classList.remove("is-invalid");
+        const err = document.getElementById("modalRegisterEmailError");
+        if (err) err.classList.remove("visible");
+      }
+
+      if (!passInput.value || passInput.value.length < 6) {
+        passInput.classList.add("is-invalid");
+        const err = document.getElementById("modalRegisterPasswordError");
+        if (err) err.classList.add("visible");
+        isValid = false;
+      } else {
+        passInput.classList.remove("is-invalid");
+        const err = document.getElementById("modalRegisterPasswordError");
+        if (err) err.classList.remove("visible");
+      }
+
+      if (!termsCheckbox.checked) {
+        const err = document.getElementById("modalRegisterTermsError");
+        if (err) err.classList.add("visible");
+        isValid = false;
+      } else {
+        const err = document.getElementById("modalRegisterTermsError");
+        if (err) err.classList.remove("visible");
+      }
+
+      if (!isValid) return;
+
+      const submitBtn = document.getElementById("modalRegisterSubmitBtn");
+      const btnText = submitBtn.querySelector(".btn-text");
+      const btnLoader = submitBtn.querySelector(".btn-loader");
+      if (btnText && btnLoader) {
+        btnText.classList.add("hidden");
+        btnLoader.classList.remove("hidden");
+      }
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        const newUser = {
+          id: "usr-" + Date.now(),
+          name: nameInput.value.trim(),
+          phone: phoneInput.value.trim(),
+          email: emailInput.value.trim().toLowerCase(),
+          password: passInput.value,
+          role: "vip-client",
+          badge: "VIP Member",
+          treatmentPref: document.getElementById("modalRegisterServicePref").value,
+          registeredAt: new Date().toISOString()
+        };
+
+        const existingUsers = getRegisteredUsers();
+        existingUsers.push(newUser);
+        localStorage.setItem(AUTH_KEYS.USERS_LIST, JSON.stringify(existingUsers));
+        saveUserSession(newUser);
+
+        closeAuthModal();
+        setupUserAuthentication();
+        showToast("VIP Profile Created", `Welcome to LuxeGlow Sanctuary, ${newUser.name}! 10% welcome privilege applied.`, "success");
+
+        if (btnText && btnLoader) {
+          btnText.classList.remove("hidden");
+          btnLoader.classList.add("hidden");
+        }
+        submitBtn.disabled = false;
+      }, 600);
+    });
+  }
+
+  // Forgot password link
+  const forgotLink = document.getElementById("modalForgotPassLink");
+  if (forgotLink) {
+    forgotLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      showToast("Password Recovery", "A demo password reset verification was dispatched to your contact.", "info");
+    });
   }
 }
 
@@ -2820,6 +3584,7 @@ function setupUserAuthentication() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initLocalStorage();
+  initUserDatabase();
   renderServices();
   renderStylists();
   renderTimeSlots();
@@ -2854,9 +3619,15 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSpatialFlightWindow();
   setupSpatialAtmosphereCanvas();
   setupInteractive3DCardTilt();
+  setupGlobalAtmosphereCanvas();
+  setupCursorSpotlight();
+  setupHero3DParallax();
+  setupButtonRippleEffect();
+  setupScrollVelocityEffects();
 
   // Setup User Authentication & Session
   setupUserAuthentication();
+  setupAuthModalListeners();
 
-  console.log("🌸 LuxeGlow Salon & Spa System initialized successfully with Login Portal & VIP Session Management.");
+  console.log("?? LuxeGlow Salon & Spa System initialized successfully with Login Portal & VIP Session Management.");
 });
