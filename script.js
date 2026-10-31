@@ -2915,8 +2915,6 @@ function setupCursorSpotlight() {
 function setupHero3DParallax() {
   const heroSection = document.getElementById("home");
   const heroStage = document.getElementById("hero3DStage");
-  const heroLeftCard = document.querySelector(".hero-float-card-left");
-  const heroRightCard = document.querySelector(".hero-float-card-right");
   const heroBg = document.querySelector(".hero-bg-wrapper");
 
   if (!heroSection || !heroStage) return;
@@ -2926,23 +2924,14 @@ function setupHero3DParallax() {
     const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
     const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-    const tiltX = -normY * 6;
-    const tiltY = normX * 6;
+    const tiltX = -normY * 5;
+    const tiltY = normX * 5;
 
     heroStage.style.transform = `perspective(1200px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg)`;
-
-    if (heroLeftCard) {
-      heroLeftCard.style.transform = `translate3d(${-normX * 18}px, ${-normY * 18}px, 45px)`;
-    }
-    if (heroRightCard) {
-      heroRightCard.style.transform = `translate3d(${normX * 22}px, ${normY * 22}px, 50px)`;
-    }
   });
 
   heroSection.addEventListener("mouseleave", () => {
     heroStage.style.transform = "";
-    if (heroLeftCard) heroLeftCard.style.transform = "";
-    if (heroRightCard) heroRightCard.style.transform = "";
   });
 
   window.addEventListener("scroll", () => {

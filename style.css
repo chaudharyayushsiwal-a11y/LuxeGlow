@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    LuxeGlow | Luxury Beauty Salon & Spa Appointment Booking System
    Styles: Cream, Soft Blush Pink, Beige & Rose Gold Aesthetic
    ========================================================================== */
@@ -4614,84 +4614,62 @@ h1, h2, h3, h4, h5 {
   transition: transform 0.15s ease-out;
 }
 
-.hero-float-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(229, 192, 123, 0.45);
-  box-shadow: 0 20px 40px rgba(44, 37, 35, 0.18), 0 4px 12px rgba(197, 155, 109, 0.15);
-  padding: 14px 20px;
-  border-radius: var(--radius-pill);
+/* Hero Badges Header: Luxury Seal & Verified Rating Bubble (No Overlap) */
+.hero-badges-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  z-index: 5;
-  pointer-events: auto;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-  will-change: transform;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
 }
 
-.hero-float-card:hover {
-  transform: translateY(-6px) scale(1.05) translateZ(40px) !important;
-  box-shadow: 0 28px 50px rgba(44, 37, 35, 0.25), 0 0 20px rgba(229, 192, 123, 0.35);
-}
-
-.hero-float-card-left {
-  top: 32%;
-  left: 4%;
-  animation: floatLevitate 5s ease-in-out infinite alternate;
-}
-
-.hero-float-card-right {
-  bottom: 28%;
-  right: 4%;
-  animation: floatLevitate 6s ease-in-out 1s infinite alternate-reverse;
-}
-
-.hero-float-card .float-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFF9F3 0%, #F5ECE3 100%);
-  border: 1px solid var(--border-gold);
-  display: flex;
+.hero-rating-bubble-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 4px 10px rgba(197, 155, 109, 0.15);
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(229, 192, 123, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  font-size: 0.86rem;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
 }
 
-.hero-float-card strong {
-  display: block;
-  font-size: 0.94rem;
-  color: var(--text-primary);
-  font-family: var(--font-heading);
+.hero-rating-bubble-pill:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(229, 192, 123, 0.25);
 }
 
-.hero-float-card span {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+.hero-rating-bubble-pill .rating-stars-gold {
+  color: #F5B342;
+  font-size: 0.82rem;
+  display: inline-flex;
+  gap: 2px;
 }
 
-@media (max-width: 992px) {
-  .hero-float-card {
-    display: none !important;
-  }
+.hero-rating-bubble-pill .rating-num {
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
 }
 
-@keyframes floatLevitate {
-  0% {
-    transform: translateY(0px) rotate(0deg) translateZ(20px);
-  }
-  50% {
-    transform: translateY(-14px) rotate(1.2deg) translateZ(35px);
-  }
-  100% {
-    transform: translateY(-4px) rotate(-1deg) translateZ(25px);
-  }
+.hero-rating-bubble-pill .rating-sep {
+  opacity: 0.55;
+  color: #E5C07B;
+}
+
+.hero-rating-bubble-pill .rating-count {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
 }
 
 /* Floating 3D Geometric Background Ornaments */

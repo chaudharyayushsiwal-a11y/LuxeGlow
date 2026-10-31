@@ -4635,84 +4635,62 @@ h1, h2, h3, h4, h5 {
   transition: transform 0.15s ease-out;
 }
 
-.hero-float-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(229, 192, 123, 0.45);
-  box-shadow: 0 20px 40px rgba(44, 37, 35, 0.18), 0 4px 12px rgba(197, 155, 109, 0.15);
-  padding: 14px 20px;
-  border-radius: var(--radius-pill);
+/* Hero Badges Header: Luxury Seal & Verified Rating Bubble (No Overlap) */
+.hero-badges-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  z-index: 5;
-  pointer-events: auto;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-  will-change: transform;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
 }
 
-.hero-float-card:hover {
-  transform: translateY(-6px) scale(1.05) translateZ(40px) !important;
-  box-shadow: 0 28px 50px rgba(44, 37, 35, 0.25), 0 0 20px rgba(229, 192, 123, 0.35);
-}
-
-.hero-float-card-left {
-  top: 32%;
-  left: 4%;
-  animation: floatLevitate 5s ease-in-out infinite alternate;
-}
-
-.hero-float-card-right {
-  bottom: 28%;
-  right: 4%;
-  animation: floatLevitate 6s ease-in-out 1s infinite alternate-reverse;
-}
-
-.hero-float-card .float-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFF9F3 0%, #F5ECE3 100%);
-  border: 1px solid var(--border-gold);
-  display: flex;
+.hero-rating-bubble-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 4px 10px rgba(197, 155, 109, 0.15);
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(229, 192, 123, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  font-size: 0.86rem;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
 }
 
-.hero-float-card strong {
-  display: block;
-  font-size: 0.94rem;
-  color: var(--text-primary);
-  font-family: var(--font-heading);
+.hero-rating-bubble-pill:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(229, 192, 123, 0.25);
 }
 
-.hero-float-card span {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+.hero-rating-bubble-pill .rating-stars-gold {
+  color: #F5B342;
+  font-size: 0.82rem;
+  display: inline-flex;
+  gap: 2px;
 }
 
-@media (max-width: 992px) {
-  .hero-float-card {
-    display: none !important;
-  }
+.hero-rating-bubble-pill .rating-num {
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
 }
 
-@keyframes floatLevitate {
-  0% {
-    transform: translateY(0px) rotate(0deg) translateZ(20px);
-  }
-  50% {
-    transform: translateY(-14px) rotate(1.2deg) translateZ(35px);
-  }
-  100% {
-    transform: translateY(-4px) rotate(-1deg) translateZ(25px);
-  }
+.hero-rating-bubble-pill .rating-sep {
+  opacity: 0.55;
+  color: #E5C07B;
+}
+
+.hero-rating-bubble-pill .rating-count {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
 }
 
 /* Floating 3D Geometric Background Ornaments */
@@ -5082,27 +5060,25 @@ h1, h2, h3, h4, h5 {
       <div class="section-aura-blob blob-gold" style="top: -100px; left: 8%; width: 420px; height: 420px;" aria-hidden="true"></div>
       <div class="section-aura-blob blob-rose" style="bottom: -80px; right: 5%; width: 460px; height: 460px;" aria-hidden="true"></div>
 
-      <!-- Floating 3D Levitation Badges -->
-      <div class="hero-float-card hero-float-card-left" aria-hidden="true">
-        <div class="float-card-icon"><i class="fa-solid fa-star text-gold"></i></div>
-        <div>
-          <strong>4.9 / 5 Rating</strong>
-          <span>1,480+ Authentic Reviews</span>
-        </div>
-      </div>
-
-      <div class="hero-float-card hero-float-card-right" aria-hidden="true">
-        <div class="float-card-icon"><i class="fa-solid fa-gem text-gold"></i></div>
-        <div>
-          <strong>Haute Couture &amp; Spa</strong>
-          <span>Award-Winning Sanctuary</span>
-        </div>
-      </div>
-
       <div class="container hero-container hero-3d-stage" id="hero3DStage">
         <div class="hero-content">
-          <div class="luxury-badge">
-            <i class="fa-solid fa-crown"></i> Premier Luxury Salon &amp; Holistic Spa
+          <!-- Hero Badges Header: Luxury Seal & Verified Rating Bubble (No Overlap) -->
+          <div class="hero-badges-row">
+            <div class="luxury-badge">
+              <i class="fa-solid fa-crown"></i> Premier Luxury Salon &amp; Holistic Spa
+            </div>
+            <div class="hero-rating-bubble-pill" title="Certified Client Rating across Bengaluru">
+              <div class="rating-stars-gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-num">4.9 / 5</span>
+              <span class="rating-sep">â€¢</span>
+              <span class="rating-count">1,480+ Authentic Reviews</span>
+            </div>
           </div>
           <h1 class="hero-title">
             Beauty, Relaxation &amp; Self-Care, All in One Place.
@@ -9286,8 +9262,6 @@ function setupCursorSpotlight() {
 function setupHero3DParallax() {
   const heroSection = document.getElementById("home");
   const heroStage = document.getElementById("hero3DStage");
-  const heroLeftCard = document.querySelector(".hero-float-card-left");
-  const heroRightCard = document.querySelector(".hero-float-card-right");
   const heroBg = document.querySelector(".hero-bg-wrapper");
 
   if (!heroSection || !heroStage) return;
@@ -9297,23 +9271,14 @@ function setupHero3DParallax() {
     const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
     const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-    const tiltX = -normY * 6;
-    const tiltY = normX * 6;
+    const tiltX = -normY * 5;
+    const tiltY = normX * 5;
 
     heroStage.style.transform = `perspective(1200px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg)`;
-
-    if (heroLeftCard) {
-      heroLeftCard.style.transform = `translate3d(${-normX * 18}px, ${-normY * 18}px, 45px)`;
-    }
-    if (heroRightCard) {
-      heroRightCard.style.transform = `translate3d(${normX * 22}px, ${normY * 22}px, 50px)`;
-    }
   });
 
   heroSection.addEventListener("mouseleave", () => {
     heroStage.style.transform = "";
-    if (heroLeftCard) heroLeftCard.style.transform = "";
-    if (heroRightCard) heroRightCard.style.transform = "";
   });
 
   window.addEventListener("scroll", () => {
